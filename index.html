@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AVENTURE</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <header id="hud">
+    <div class="brand">
+      <span class="eyebrow">UMA AVENTURA ÉPICA</span>
+      <h1>AVENTURE</h1>
+      <p>UMA AVENTURA DE DAVI E YAN</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span>HERÓI</span>
+        <strong id="heroName">Davi</strong>
+      </div>
+
+      <div class="stat">
+        <span>VIDA</span>
+        <strong id="health">100 / 100</strong>
+        <div class="health-track">
+          <div id="healthBar"></div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <span>PERGAMINHOS</span>
+        <strong id="scrolls">0 / 5</strong>
+      </div>
+
+      <div class="stat">
+        <span>MAPA</span>
+        <strong id="mapName">Cidade Noturna</strong>
+      </div>
+    </div>
+  </header>
+
+  <main id="game">
+    <div id="loading">CARREGANDO AVENTURE 3D...</div>
+
+    <div id="message">
+      Encontre os cinco pergaminhos perdidos.
+    </div>
+
+    <div id="errorBox" class="hidden">
+      <h2>Erro ao carregar o jogo</h2>
+      <p id="errorText">
+        Confira a conexão e abra pelo Live Server.
+      </p>
+    </div>
+
+    <section id="startScreen" class="overlay">
+      <div class="panel">
+        <span class="eyebrow">O DESTINO DE DOIS IRMÃOS</span>
+
+        <h2>AVENTURE</h2>
+
+        <p>
+          Davi e Yan precisam explorar uma cidade misteriosa
+          durante a noite, enfrentar inimigos e encontrar
+          cinco pergaminhos antigos.
+        </p>
+
+        <p class="story">
+          Quando todos os pergaminhos forem encontrados,
+          um portal permitirá entrar em uma dimensão sombria
+          e enfrentar o Senhor das Sombras.
+        </p>
+
+        <button id="startButton">
+          INICIAR AVENTURA
+        </button>
+
+        <small>
+          WASD para andar • Mouse para câmera • Espaço para atacar
+        </small>
+      </div>
+    </section>
+
+    <section id="endScreen" class="overlay hidden">
+      <div class="panel">
+        <span class="eyebrow">FIM DA JORNADA</span>
+
+        <h2 id="endTitle">VITÓRIA!</h2>
+
+        <p id="endText"></p>
+
+        <button id="restartButton">
+          JOGAR NOVAMENTE
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="bottom">
+    <div class="controls">
+      <span><b>W A S D</b> MOVER</span>
+      <span><b>MOUSE</b> CÂMERA</span>
+      <span><b>ESPAÇO</b> ATACAR</span>
+      <span><b>Q</b> TROCAR IRMÃO</span>
+      <span><b>E</b> COLETAR / PORTAL</span>
+      <span><b>SHIFT</b> CORRER</span>
+    </div>
+
+    <p>
+      EXPLORE A CIDADE • ENCONTRE OS PERGAMINHOS
+      • DERROTE O CHEFÃO
+    </p>
+  </footer>
+</body>
+</html>
